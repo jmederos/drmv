@@ -1,8 +1,6 @@
-#=========="The Stark Secure Server"==================================================================================
-# 	Author: Jacob Mederos																							 #
-# 	Synopsis: This is an IRL implementation of the emergency call system used in Iron Man 3. The idea is to 		 #
-#			  have a single number you can call and pull your contacts, send out a voice/SMS "distress" message		 #
-# 			  to a group of friends/relatives. Other functionalities include a translation system and call recording #
+#=========="DRM Violators"==================================================================================
+# 	Authors: 																							 #
+# 	Synopsis:
 #=====================================================================================================================
 
 require 'sinatra'
