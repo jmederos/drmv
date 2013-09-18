@@ -39,27 +39,77 @@
 	opacity: 30;
 }
 
-#leftCol{
-	width: 300px;
-	height:700px;
-	float:left;
-}
-#middleCol{
-	width: 300px;
-	height:700px;
+/*#grid {                             
+  	float: left;                      
+  	width: 960px;                     
+  	margin: 0;                        
+  	padding: 0;                       
+  	background: white;                
+  	}  */                               
+                                      
+  .block {                            
+    position: absolute;               
+    /*border: 1px solid white; */
+    background:rgba(255, 255, 255, 0.2);
+	opacity: 80;         
+    }                                 
+                                      
+  .inner {                            
+    height: 100%;                     
+    width: 100%;                      
+    }                                 
+                                      
+  .s1x1 {                             
+    height: 150px;                    
+    width: 150px;                     
+    }                                 
+                                                   
+                                      
+  /* Blocks Position */               
+                                      
+  .p0x0 {                             
+    top: 15%;                         
+    left: 30%;                        
+    } 
 
-}
-#rightCol{
-	width: 300px;
-	height:700px;
-	float:right;
-}
+  .p1x0 {                             
+    top: 15%;                           
+    left: 50%;                      
+    } 
 
-.box{
-	padding:30px;
-	margin: 10px;
-	width: 200px;
-	height: 100px;
-	background:rgba(255, 255, 255, 0.2);
-	opacity: 80;
-}
+  .p2x0 {                             
+    top: 15%;                         
+    left: 70%;                      
+    }   
+
+  .p0x1 {                             
+    top: 45%;                       
+    left: 30%;                        
+    } 
+
+  .p1x1 {                             
+    top: 45%;                         
+    left: 50%;                      
+    }                                     
+
+  .p2x1 {                             
+    top: 45%;                       
+    left: 70%;                      
+    }     
+
+  .p0x2 {                             
+    top: 75%;                       
+    left: 30%;                        
+    }
+                                                                                        
+                                      
+  .p1x2 {                             
+    top: 75%;                       
+    left: 50%;                      
+     }                                
+                                      
+  .p2x2 {                             
+    top: 75%;                       
+    left: 70%;                      
+     }                                
+ 
