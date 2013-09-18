@@ -1,11 +1,13 @@
 /*index.css*/
 
 html { 
-  background: url(../images/bg_3.jpg) no-repeat center center fixed; 
+  background: url(../images/bg_4.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  /*z-index: 12;*/
 }
 
 h1 {
@@ -14,6 +16,31 @@ h1 {
 	font-style: italic;
 	font-size: 90px;
 	color: white;
+}
+
+.blur {
+	background: url(../images/bg_4.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+	background-color: rgba(0, 255, 0, 0.1);
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	
+	z-index: -1;
+
+	overflow: none;
 }
 
 #container 
@@ -34,6 +61,8 @@ h1 {
 	background:rgba(255, 255, 255, 0.2);;
 
 	text-align:center;
+
+	z-index: 52;
 }
 
 #sidebar 
@@ -41,7 +70,9 @@ h1 {
 	width:150px;
 	height:400px;
 	float:left;
-	background:rgba(255, 255, 255, 0.2);;
+	background:rgba(255, 255, 255, 0.2);
+
+	z-index: 52;
 }
 
 #content
@@ -49,5 +80,7 @@ h1 {
 	width:900px;
 	height:700px;
 	float:right;
-	background:rgba(255, 255, 255, 0.2);;
+	background:rgba(255, 255, 255, 0.2);
+
+	z-index: 52;
 }
