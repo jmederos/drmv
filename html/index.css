@@ -16,23 +16,41 @@ body{
 h1 {
 	margin: 0px;
 
+	/*Font Styling*/
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;
 	font-style: italic;
 	font-size: 90px;
-	color: white;
 
+	/*Color and themeing*/
+	color: white;
 	text-shadow:0 0 0 transparent, 1px 1px 3px rgba(0,0,0,1.0);
 }
 
 p {
 	margin: 0px;
 
+	/*Font Styling*/
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	font-size: x-large;
+
+	/*Color and themeing*/
 	color: white;
-	text-shadow:0 0 0 transparent, 1px 1px 3px rgba(0,0,0,0.8)
+	text-shadow:0 0 0 transparent, 1px 1px 3px rgba(0,0,0,0.8) 
+}
+
+a {
+	margin: 0px;
+
+	/*Font Styling*/
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: x-large;
+
+	/*Color and themeing*/
+	color: white;
+	text-shadow:0 0 0 transparent, 1px 1px 3px rgba(0,0,0,0.8) 
 }
 
 .blur {
@@ -47,7 +65,7 @@ p {
     z-index: -1;
 
     /*Background*/
-	background: url(../images/bg_3.jpg) no-repeat center center fixed;
+	background: url(../images/bg_3_blur.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -55,7 +73,8 @@ p {
 
 	/*Filters*/
 	filter: blur(15px) brightness(.5);
-	-webkit-filter: blur(15px) saturate(105%) brightness(1.2) ;
+	/*-webkit-filter: blur(30px) saturate(105%) brightness(1.2);*/
+	-webkit-filter: saturate(105%) brightness(1.2);
 	/*-moz-filter: blur(15px) brightness(0.5);
 	-o-filter: blur(15px) brightness(0.5);
 	-ms-filter: blur(15px) brightness(0.5);*/
@@ -77,6 +96,8 @@ p {
 #mainContainer 
 {
 	width:90%;
+	min-width: 600px;
+	max-width: 2000px;
 	height: auto;
 	margin: auto;
 }
@@ -84,7 +105,9 @@ p {
 #titleContainer
 {
 	width:88%;
-	height:100px;
+	height:110px;
+	min-width: 450px;
+	min-height: 110px;
 	position: relative;
 
 	/*Margins and Padding*/
@@ -93,7 +116,7 @@ p {
 	margin-bottom: 20px;
 
 	padding-top:0px;
-	padding-bottom: 5px;
+	padding-bottom: 0px;
 
 	text-align:center;
 }
@@ -101,7 +124,9 @@ p {
 #sidebarContainer 
 {
 	width:10%;
-	height:100px;
+	height:600px;
+	min-width: 70px;
+	max-width: 90px;
 	position: relative;
 	float:left;
 
@@ -112,6 +137,8 @@ p {
 {
 	width:88%;
 	height:600px;
+	min-width: 450px;
+	max-height: 800px;
 	position: relative;
 
 	/*Margins and Padding*/
