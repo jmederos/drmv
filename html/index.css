@@ -1,16 +1,41 @@
 /*index.css*/
 
+@-webkit-keyframes changeSat {
+	0% {
+		-webkit-filter: saturate(100%) brightness(100%);
+	}
+	100% {
+		-webkit-filter: saturate(200%) brightness(200%);
+	}
+}
+
+@-webkit-keyframes changeSatBack {
+	0% {
+		-webkit-filter: saturate(200%) brightness(200%);
+	}
+	100% {
+		-webkit-filter: saturate(100%) brightness(100%);
+	}
+}
+
+
 html {
 	/*background*/
-	background: url(../images/bg_3.jpg) no-repeat center center fixed; 
+	background-color: black;
+/*	background: url(../images/bg_5.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;*/
 }
 
 body{
 	margin: 0;
+}
+
+img{
+	min-width: 100%;
+	min-height: 100%;
 }
 
 h1 {
@@ -48,16 +73,41 @@ a {
 	font-weight: 300;
 	font-size: x-large;
 
+	text-decoration: none;
+
 	/*Color and themeing*/
 	color: white;
-	text-shadow:0 0 0 transparent, 1px 1px 3px rgba(0,0,0,0.8) 
+	text-shadow:0 0 0 transparent, 1px 1px 3px rgba(0,0,0,0.8);
+
+	/*Transition and Animation*/
+	-webkit-transition: 0.5s ease;
+}
+
+	a:link{
+
+	}
+
+	a:visited{
+		/*Color and themeing*/
+		/*color: yellow;*/
+
+		/*Transition and Animation*/
+		-webkit-transition: 0.5s ease;
+	}
+
+	a:hover{
+		/*Color and themeing*/
+		/*color: rgba(255, 255, 220, 1.0);*/
+
+		/*Transition and Animation*/
+		-webkit-transition: 0.5s ease;
 }
 
 .blur {
 	/*Position and Sizing*/
 	width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
 
     /*Margins and Padding*/
     margin: 0px;
@@ -65,20 +115,63 @@ a {
     z-index: -1;
 
     /*Background*/
-	background: url(../images/bg_3_blur.jpg) no-repeat center center fixed;
+	background: url(../images/bg_3.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 
 	/*Filters*/
-	filter: blur(15px) brightness(.5);
-	/*-webkit-filter: blur(30px) saturate(105%) brightness(1.2);*/
+	filter: saturate(105%) brightness(1.2);
+	/*-webkit-filter: saturate(105%) brightness(1.2);*/
 	-webkit-filter: saturate(105%) brightness(1.2);
-	/*-moz-filter: blur(15px) brightness(0.5);
-	-o-filter: blur(15px) brightness(0.5);
-	-ms-filter: blur(15px) brightness(0.5);*/
+	/*-moz-filter: saturate(105%) brightness(1.2);
+	-o-filter: saturate(105%) brightness(1.2);
+	-ms-filter: saturate(105%) brightness(1.2);*/
 }
+
+.newBlur {
+	/*Position and Sizing*/
+	width: 100%;
+    height: 100%;
+    /*z-index: -1;*/
+
+	/*Filters*/
+	/*filter: saturate(100%) brightness(1.0);*/
+	/*-webkit-filter: saturate(105%) brightness(1.2);*/
+	-webkit-filter: saturate(100%) brightness(1.0);
+	-moz-filter: saturate(300%) brightness(3.0);
+	/*-o-filter: saturate(105%) brightness(1.2);
+	-ms-filter: saturate(105%) brightness(1.2);
+*/
+	-webkit-transition: 2s ease;
+
+	overflow: hidden;
+}
+	
+	.newBlur img{
+		-webkit-animation-name: changeSatBack;
+		-webkit-animation-duration: 0.5s;
+	    -webkit-animation-iteration-count: 1;
+	    -webkit-animation-direction: alternate;
+	    -webkit-animation-timing-function: ease-in;
+	    -webkit-animation-fill-mode: forwards;
+	    -webkit-animation-delay: 0s;
+		pointer-events:none;
+		/*-webkit-transition: .2s ease;*/
+	}
+
+	.newBlur:hover img{
+		-webkit-animation-name: changeSat;
+		-webkit-animation-duration: 0.5s;
+	    -webkit-animation-iteration-count: 1;
+	    -webkit-animation-direction: alternate;
+	    -webkit-animation-timing-function: ease-out;
+	    -webkit-animation-fill-mode: forwards;
+	    -webkit-animation-delay: 0s;
+
+	}
+
 
 .content
 {
@@ -88,18 +181,40 @@ a {
     top: 0;
     left: 0;
 
-    background:rgba(255, 255, 255, 0.15);
+    background:rgba(255, 255, 255, 0.25);
 
 	z-index: 52;
+
+	overflow: hidden;
 }
+	.content:hover
+	{
+		
+	}
 
 #mainContainer 
+{
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	margin: 0;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+}
+
+#layoutContainer 
 {
 	width:90%;
 	min-width: 600px;
 	max-width: 2000px;
 	height: auto;
 	margin: auto;
+
+	overflow: hidden;
 }
 
 #titleContainer
@@ -119,24 +234,46 @@ a {
 	padding-bottom: 0px;
 
 	text-align:center;
+
+	overflow: hidden;
 }
 
 #sidebarContainer 
 {
 	width:10%;
-	height:600px;
-	min-width: 70px;
-	max-width: 90px;
+	height:300px;
+	min-width: 80px;
+	max-width: 110px;
 	position: relative;
 	float:left;
 
 	z-index: 52;
+
+	overflow: hidden;
 }
+	#sidebarContainer > .content{
+		height: 70%;
+	}
+
+.sidebarElement
+{
+	background-color: rgba(255, 255, 255, 0.25);
+
+	padding-left: 5px;
+	padding-right: 30px;
+	-webkit-transition: 0.75s ease;
+}
+
+	.sidebarElement:hover
+	{
+		background:rgba(200, 170, 255, 0.7);
+		-webkit-transition: 0.75s ease;
+	}
 
 #contentContainer
 {
 	width:88%;
-	height:600px;
+	height:300px;
 	min-width: 450px;
 	max-height: 800px;
 	position: relative;
@@ -145,7 +282,8 @@ a {
 	margin-bottom: 5%;
 
 	float:right;
-	/*background:rgba(255, 255, 255, 0.2);*/
 
 	z-index: 52;
+
+	overflow: hidden;
 }
