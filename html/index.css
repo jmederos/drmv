@@ -1,23 +1,48 @@
 /*index.css*/
 
-@-webkit-keyframes changeSat {
+@keyframes changeSat {
 	0% {
-		-webkit-filter: saturate(100%) brightness(100%);
+		filter: saturate(100%) brightness(1.0);
+		-webkit-filter: saturate(100%) brightness(1.0);
 	}
 	100% {
-		-webkit-filter: saturate(200%) brightness(200%);
+		filter: saturate(250%) brightness(2.5);
+		-webkit-filter: saturate(250%) brightness(2.5);
+	}
+}
+
+@keyframes changeSatBack {
+	0% {
+		filter: saturate(250%) brightness(2.5);
+		-webkit-filter: saturate(250%) brightness(2.5);
+	}
+	100% {
+		filter: saturate(100%) brightness(1.0);
+		-webkit-filter: saturate(100%) brightness(1.0);
+	}
+}
+
+@-webkit-keyframes changeSat {
+	0% {
+		filter: saturate(100%) brightness(1.0);
+		-webkit-filter: saturate(100%) brightness(1.0);
+	}
+	100% {
+		filter: saturate(250%) brightness(2.5);
+		-webkit-filter: saturate(250%) brightness(2.5);
 	}
 }
 
 @-webkit-keyframes changeSatBack {
 	0% {
-		-webkit-filter: saturate(200%) brightness(200%);
+		filter: saturate(250%) brightness(2.5);
+		-webkit-filter: saturate(250%) brightness(2.5);
 	}
 	100% {
-		-webkit-filter: saturate(100%) brightness(100%);
+		filter: saturate(100%) brightness(1.0);
+		-webkit-filter: saturate(100%) brightness(1.0);
 	}
 }
-
 
 html {
 	/*background*/
@@ -80,7 +105,9 @@ a {
 	text-shadow:0 0 0 transparent, 1px 1px 3px rgba(0,0,0,0.8);
 
 	/*Transition and Animation*/
-	-webkit-transition: 0.5s ease;
+	transition: 0.75s ease;
+	-moz-transition: 0.75s ease;
+	-webkit-transition: 0.75s ease;
 }
 
 	a:link{
@@ -92,7 +119,9 @@ a {
 		/*color: yellow;*/
 
 		/*Transition and Animation*/
-		-webkit-transition: 0.5s ease;
+		transition: 0.75s ease;
+		-moz-transition: 0.75s ease;
+		-webkit-transition: 0.75s ease;
 	}
 
 	a:hover{
@@ -100,7 +129,9 @@ a {
 		/*color: rgba(255, 255, 220, 1.0);*/
 
 		/*Transition and Animation*/
-		-webkit-transition: 0.5s ease;
+		transition: 0.75s ease;
+		-moz-transition: 0.75s ease;
+		-webkit-transition: 0.75s ease;
 }
 
 .blur {
@@ -137,38 +168,73 @@ a {
     /*z-index: -1;*/
 
 	/*Filters*/
-	/*filter: saturate(100%) brightness(1.0);*/
-	/*-webkit-filter: saturate(105%) brightness(1.2);*/
-	-webkit-filter: saturate(100%) brightness(1.0);
-	-moz-filter: saturate(300%) brightness(3.0);
-	/*-o-filter: saturate(105%) brightness(1.2);
+	filter: saturate(105%) brightness(1.2);
+	-webkit-filter: saturate(105%) brightness(1.2);
+	-moz-filter: saturate(105%) brightness(1.2);
+	-o-filter: saturate(105%) brightness(1.2);
 	-ms-filter: saturate(105%) brightness(1.2);
-*/
-	-webkit-transition: 2s ease;
+
+	transition: 0.75s ease;
+	-moz-transition: 0.75s ease;
+	-webkit-transition: 0.75s ease;
 
 	overflow: hidden;
+	background-clip: content-box;
 }
 	
 	.newBlur img{
+		animation-name: changeSatBack;
+		animation-duration: 0.75s;
+	    animation-iteration-count: 1;
+	    animation-direction: alternate;
+	    animation-timing-function: ease;
+	    animation-fill-mode: forwards;
+	    animation-delay: 0s;
+	    
 		-webkit-animation-name: changeSatBack;
-		-webkit-animation-duration: 0.5s;
+		-webkit-animation-duration: 0.75s;
 	    -webkit-animation-iteration-count: 1;
 	    -webkit-animation-direction: alternate;
-	    -webkit-animation-timing-function: ease-in;
+	    -webkit-animation-timing-function: ease;
 	    -webkit-animation-fill-mode: forwards;
 	    -webkit-animation-delay: 0s;
+
+		-moz-animation-name: changeSatBack;
+		-moz-animation-duration: 0.75s;
+	    -moz-animation-iteration-count: 1;
+	    -moz-animation-direction: alternate;
+	    -moz-animation-timing-function: ease;
+	    -moz-animation-fill-mode: forwards;
+	    -moz-animation-delay: 0s;
+
 		pointer-events:none;
 		/*-webkit-transition: .2s ease;*/
 	}
 
 	.newBlur:hover img{
+		animation-name: changeSat;
+		animation-duration: 0.75s;
+	    animation-iteration-count: 1;
+	    animation-direction: alternate;
+	    animation-timing-function: ease;
+	    animation-fill-mode: forwards;
+	    animation-delay: 0s;
+	    
 		-webkit-animation-name: changeSat;
-		-webkit-animation-duration: 0.5s;
+		-webkit-animation-duration: 0.75s;
 	    -webkit-animation-iteration-count: 1;
 	    -webkit-animation-direction: alternate;
-	    -webkit-animation-timing-function: ease-out;
+	    -webkit-animation-timing-function: ease;
 	    -webkit-animation-fill-mode: forwards;
 	    -webkit-animation-delay: 0s;
+
+		-moz-animation-name: changeSat;
+		-moz-animation-duration: 0.75s;
+	    -moz-animation-iteration-count: 1;
+	    -moz-animation-direction: alternate;
+	    -moz-animation-timing-function: ease;
+	    -moz-animation-fill-mode: forwards;
+	    -moz-animation-delay: 0s;
 
 	}
 
@@ -263,12 +329,18 @@ a {
 
 	padding-left: 10px;
 	padding-right: 45px;
+
+	transition: 0.75s ease;
+	-moz-transition: 0.75s ease;
 	-webkit-transition: 0.75s ease;
 }
 
 	.sidebarElement:hover
 	{
 		background:rgba(100, 200, 255, 0.4);
+
+		transition: 0.75s ease;
+		-moz-transition: 0.75s ease;
 		-webkit-transition: 0.75s ease;
 	}
 
@@ -276,18 +348,27 @@ a {
 #google:hover
 {
   background:rgba(241, 181, 15, 0.6);
+
+  transition: 0.75s ease;
+  -moz-transition: 0.75s ease;
   -webkit-transition: 0.75s ease;
 }
 
 #facebook:hover
 {
   background:rgba(59, 89, 152, 0.6);
+
+  transition: 0.75s ease;
+  -moz-transition: 0.75s ease;
   -webkit-transition: 0.75s ease;
 }
 
 #yahoo:hover
 {
   background:rgba(123, 0, 153, 0.6);
+
+  transition: 0.75s ease;
+  -moz-transition: 0.75s ease;
   -webkit-transition: 0.75s ease;
 }
 
