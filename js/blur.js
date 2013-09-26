@@ -30,5 +30,5 @@ function glassInit ()
 	blur_bg.css("z-index", "-100");
 
 	setGlass();
-	setTimeout(setGlass, 80);
+	setTimeout(setGlass, 150);
 }
