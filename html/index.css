@@ -242,8 +242,8 @@ a {
 {
 	width:10%;
 	height:300px;
-	min-width: 80px;
-	max-width: 110px;
+	min-width: 100px;
+	max-width: 130px;
 	position: relative;
 	float:left;
 
@@ -259,16 +259,32 @@ a {
 {
 	background-color: rgba(255, 255, 255, 0.25);
 
-	padding-left: 5px;
-	padding-right: 30px;
+	text-align: center;
+
+	padding-left: 10px;
+	padding-right: 45px;
 	-webkit-transition: 0.75s ease;
 }
 
 	.sidebarElement:hover
 	{
-		background:rgba(200, 170, 255, 0.7);
+		background:rgba(100, 200, 255, 0.4);
 		-webkit-transition: 0.75s ease;
 	}
+
+#google:hover
+{
+	background:rgba(241, 181, 15, 0.4);
+	-webkit-transition: 0.75s ease;
+}
+
+#facebook:hover
+{
+	background:rgba(59, 89, 152, 0.8);
+	-webkit-blend-mode: color-dodge;
+	-webkit-background-blend-mode: color-dodge;
+	-webkit-transition: 0.75s ease;
+}
 
 #contentContainer
 {
