@@ -272,18 +272,23 @@ a {
 		-webkit-transition: 0.75s ease;
 	}
 
+
 #google:hover
 {
-	background:rgba(241, 181, 15, 0.4);
-	-webkit-transition: 0.75s ease;
+  background:rgba(241, 181, 15, 0.6);
+  -webkit-transition: 0.75s ease;
 }
 
 #facebook:hover
 {
-	background:rgba(59, 89, 152, 0.8);
-	-webkit-blend-mode: color-dodge;
-	-webkit-background-blend-mode: color-dodge;
-	-webkit-transition: 0.75s ease;
+  background:rgba(59, 89, 152, 0.6);
+  -webkit-transition: 0.75s ease;
+}
+
+#yahoo:hover
+{
+  background:rgba(123, 0, 153, 0.6);
+  -webkit-transition: 0.75s ease;
 }
 
 #contentContainer
