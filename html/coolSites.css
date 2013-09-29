@@ -29,6 +29,7 @@ html {
   background-size: cover;
 }
 
+
 body{
   margin: 0;
 }
@@ -133,7 +134,7 @@ a {
     /*-webkit-filter: saturate(250%) brightness(2.0);*/
   }
 
-.content
+.content 
 {
     width: 100%;
     height: 100%;
@@ -143,9 +144,9 @@ a {
 
     background:rgba(255, 255, 255, 0.25);
 
-  z-index: 52;
+    z-index: 52;
 
-  overflow: hidden;
+    overflow: scroll;
 }
   .content:hover
   {
@@ -282,25 +283,26 @@ a {
   #col1{
     top: 10%;
     left: 0;
-    margin-left: 10%;
-    margin-right: 3%;
+    margin-left: 13.5%;
+    /*margin-right: 3%;*/
   }
   #col2{
     top: 10%;
     left: 38%;
-    margin-right: 3%;
-    margin-left: 3%;
+    /*margin-right: 3%;
+    margin-left: 3%;*/
   }
   #col3{
     top: 10%;
     right: 0;
-    margin-left: 3%;
-    margin-right: 6%;
+    /*margin-left: 3%;*/
+    margin-right: 12.5%;
   } 
 
 .box{
   width: 100%;
   height: 30%;
+  background:rgba(255, 255, 255)
 }
   .box1{
     top:0;
